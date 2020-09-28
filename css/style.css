@@ -738,12 +738,14 @@ ol {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 4px;
-	color: #7fad39;
+	color: #c3ff6a;
 }
 
 .hero__text h2 {
 	font-size: 46px;
-	color: #252525;
+	color: #ffffff;
+	text-shadow: #111111;
+	border: #000000;
 	line-height: 52px;
 	font-weight: 700;
 	margin: 10px 0;
@@ -751,6 +753,8 @@ ol {
 
 .hero__text p {
 	margin-bottom: 35px;
+	color: #080808;
+	border: #000000;
 }
 
 /*---------------------
