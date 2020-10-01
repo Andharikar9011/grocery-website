@@ -12,6 +12,7 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet"> -->
 
     <!-- Css Styles -->
+    
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
@@ -232,7 +233,7 @@
                     <a href="#"><i class="fa fa-retweet"></i></a>
                   </li> -->
                   <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                    <a onclick=""><i class="fa fa-shopping-cart"></i></a>
                   </li>
                 </ul>
               </div>
@@ -772,6 +773,16 @@
     <!-- Blog Section End -->
 
     <!-- Footer Section Begin -->
+
+    
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <script>
+      function clickCounter() {
+        document.getElementById("result").innerHTML=sessionStorage.getItem("APPLE")
+      }
+</script>
+
     <footer class="footer spad">
       <div class="container">
         <div class="row">
