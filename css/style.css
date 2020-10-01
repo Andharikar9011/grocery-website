@@ -9,12 +9,11 @@
 
 /*------------------------------------------------------------------
 [Table of contents]
-
 1.  Template default CSS
-	1.1	Variables
-	1.2	Mixins
-	1.3	Flexbox
-	1.4	Reset
+  1.1 Variables
+  1.2 Mixins
+  1.3 Flexbox
+  1.4 Reset
 2.  Helper Css
 3.  Header Section
 4.  Hero Section
@@ -1052,6 +1051,13 @@ ol {
   font-size: 46px;
   color: #ffffff;
   font-weight: 700;
+}
+.breadcrumb__texter h2 {
+  font-size: 46px;
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  margin: 20px;
 }
 
 .breadcrumb__option a {
@@ -2637,6 +2643,7 @@ ol {
   background: #f3f6fa;
   padding-top: 70px;
   padding-bottom: 0;
+  margin-top: 50px;
 }
 
 .footer__about {
@@ -2770,6 +2777,7 @@ ol {
 .contact {
   padding-top: 80px;
   padding-bottom: 50px;
+
 }
 
 .contact__widget {
@@ -2925,6 +2933,12 @@ ol {
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1170px;
+    margin:0 auto;
+  }
+  .containerd {
+    margin: auto;
+  width: 50%;
+  padding: 10px;
   }
 }
 
