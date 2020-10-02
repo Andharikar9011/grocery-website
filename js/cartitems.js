@@ -1,3 +1,4 @@
+var cartvalue=0;
 function addproduct(product, value, per) {
     var prod = [];
     var val = [];
@@ -32,8 +33,23 @@ function addproduct(product, value, per) {
       mass.push(per);
       sessionStorage.setItem("per", mass);
       console.log(prod, val, mass); 
+      
       } else {
         alert("Product Already Added.")
       }
     }
   }
+
+
+  
+ try {
+    cartvalue=sessionStorage.getItem("products").split(",").length
+    var a= document.getElementById("cartvalue");
+    a.innerHTML= cartvalue;
+ } catch (error) {
+    var a= document.getElementById("cartvalue");
+    a.innerHTML= 0;
+ }
+ 
+  
+  
