@@ -836,15 +836,15 @@
           sessionStorage.setItem("per", mass);
           console.log(sessionStorage.getItem("products"));
         } else if (sessionStorage.getItem("products") != []) {
-          var prod = sessionStorage.getItem("products").split();
+          var prod = sessionStorage.getItem("products").split(",");
           console.log(prod);
           console.log(typeof prod);
           prod.push(product);
           sessionStorage.setItem("products", prod);
-          var val = sessionStorage.getItem("value").split();
+          var val = sessionStorage.getItem("value").split(",");
           val.push(value);
           sessionStorage.setItem("value", val);
-          var mass = sessionStorage.getItem("per").split();
+          var mass = sessionStorage.getItem("per").split(",");
           mass.push(per);
           sessionStorage.setItem("per", mass);
           console.log(prod, val, mass);
