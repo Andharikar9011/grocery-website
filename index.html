@@ -841,10 +841,10 @@
           console.log(typeof prod);
           prod.push(product);
           sessionStorage.setItem("products", prod);
-          var val = sessionStorage.getItem("value");
+          var val = sessionStorage.getItem("value").split();
           val.push(value);
           sessionStorage.setItem("value", val);
-          var mass = sessionStorage.getItem("per");
+          var mass = sessionStorage.getItem("per").split();
           mass.push(per);
           sessionStorage.setItem("per", mass);
           console.log(prod, val, mass);
