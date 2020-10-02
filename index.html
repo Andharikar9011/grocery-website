@@ -232,7 +232,9 @@
                     <a href="#"><i class="fa fa-retweet"></i></a>
                   </li> -->
                   <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                    <a onclick="addproduct('Apple','60','perkg')"
+                      ><i class="fa fa-shopping-cart"></i
+                    ></a>
                   </li>
                 </ul>
               </div>
@@ -782,7 +784,40 @@
         </div>
     </section> -->
     <!-- Blog Section End -->
-
+    <script>
+      function addproduct(product, value, per) {
+        var prod = [];
+        var val = [];
+        var mass = [];
+        console.log(sessionStorage);
+        if (
+          sessionStorage.getItem("products") == undefined ||
+          sessionStorage.getItem("products") == []
+        ) {
+          console.log("emptycart");
+          prod.push(product);
+          val.push(value);
+          mass.push(per);
+          sessionStorage.setItem("products", prod);
+          sessionStorage.setItem("value", val);
+          sessionStorage.setItem("per", mass);
+          console.log(sessionStorage.getItem("products"));
+        } else if (sessionStorage.getItem("products") != []) {
+          var prod = sessionStorage.getItem("products").split();
+          console.log(prod);
+          console.log(typeof prod);
+          prod.push(product);
+          sessionStorage.setItem("products", prod);
+          var val = sessionStorage.getItem("value");
+          val.push(value);
+          sessionStorage.setItem("value", val);
+          var mass = sessionStorage.getItem("per");
+          mass.push(per);
+          sessionStorage.setItem("per", mass);
+          console.log(prod, val, mass);
+        }
+      }
+    </script>
     <!-- Footer Section Begin -->
     <footer class="footer spad">
       <div class="container">
