@@ -1,3 +1,0 @@
-addproduct(name,cost,pervalue)={
-
-}
