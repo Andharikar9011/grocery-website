@@ -110,7 +110,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <button onclick="cart_generator()" class="primary-btn">
+            <button onclick="cart_generator()" id="hide" class="primary-btn">
               LOAD CART
             </button>
             <br />
@@ -172,6 +172,17 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $("button").hide();
+        });
+        $("#show").click(function () {
+          $("button").show();
+        });
+      });
+    </script>
     <script src="js/cartitems.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
