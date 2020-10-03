@@ -78,16 +78,7 @@
               </ul>
             </nav>
           </div>
-          <div class="col-lg-3">
-            <div class="header__cart">
-              <ul>
-                <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> -->
-                <li>
-                  <a href="#"><i class="fa fa-shopping-cart"></i> </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <div class="col-lg-3"></div>
         </div>
         <div class="humberger__open">
           <i class="fa fa-bars"></i>
@@ -113,12 +104,17 @@
       </div>
     </section>
     <!-- Breadcrumb Section End -->
-    <button onclick="cart_generator()">Try it</button>
+
     <!-- Shoping Cart Section Begin -->
     <section class="shoping-cart spad">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
+            <button onclick="cart_generator()" class="primary-btn">
+              LOAD CART
+            </button>
+            <br />
+            <br />
             <div class="shoping__cart__table">
               <table>
                 <thead>
@@ -130,44 +126,12 @@
                     <th></th>
                   </tr>
                 </thead>
-                <tbody id="my"> 
-                   
-                </tbody>
+                <tbody id="my"></tbody>
               </table>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="shoping__cart__btns">
-              <a href="#" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
-              <a href="#" class="primary-btn cart-btn cart-btn-right"
-                ><span class="icon_loading"></span> Upadate Cart</a
-              >
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="shoping__continue">
-              <div class="shoping__discount">
-                <h5>Discount Codes</h5>
-                <form action="#">
-                  <input type="text" placeholder="Enter your coupon code" />
-                  <button type="submit" class="site-btn">APPLY COUPON</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="shoping__checkout">
-              <h5>Cart Total</h5>
-              <ul>
-                <li>Subtotal <span> ₹454.98</span></li>
-                <li>Total <span> ₹454.98</span></li>
-              </ul>
-              <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
-            </div>
-          </div>
-        </div>
+        <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
       </div>
     </section>
     <!-- Shoping Cart Section End -->
