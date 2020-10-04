@@ -1,4 +1,7 @@
 "use strict";
+
+
+
 var cartvalue = 0;
 function addproduct(product,value, per,quant) {
   var prod = [];
@@ -91,7 +94,7 @@ function cart_generator() {
       var td2 = document.createElement("TD");
       td2.setAttribute("id", index + "-2");
       td2.setAttribute("class", "shoping__cart__price");
-      td2.innerHTML = val[index] + " " + mass[index];
+      td2.innerHTML ="₹ "+ val[index] + " " + mass[index];
       document.getElementById(index + "-1").appendChild(td2);
       // td3
       var td3 = document.createElement("TD");
@@ -133,7 +136,7 @@ function cart_generator() {
       var td4 = document.createElement("TD");
       td4.setAttribute("id", index + "-4");
       td4.setAttribute("class", "shoping__cart__total");
-      td4.innerHTML = parseInt(val[index])*parseInt(quantitylist[index])
+      td4.innerHTML ="₹ " + (parseInt(val[index])*parseInt(quantitylist[index])).toString()
       document.getElementById(index + "-1").appendChild(td4);
       // td5
       // var td5 = document.createElement("TD");
