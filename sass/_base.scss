@@ -31,7 +31,7 @@
 html,
 body {
   height: 100%;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -45,7 +45,7 @@ h6 {
   margin: 0;
   color: #111111;
   font-weight: 400;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 h1 {
@@ -74,7 +74,7 @@ h6 {
 
 p {
   font-size: 16px;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
   color: #6f6f6f;
   font-weight: 400;
   line-height: 26px;
@@ -186,7 +186,7 @@ ol {
   top: 0;
   left: 0;
   z-index: 999999;
-  background: #000;
+  background: #fff;
 }
 
 .loader {
@@ -206,21 +206,21 @@ ol {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    border: 4px solid #f44336;
+    border: 4px solid #7fad39;
     border-left-color: transparent;
   }
 
   50% {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    border: 4px solid #673ab7;
+    border: 4px solid #7fad39;
     border-left-color: transparent;
   }
 
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    border: 4px solid #f44336;
+    border: 4px solid #7fad39;
     border-left-color: transparent;
   }
 }
@@ -228,19 +228,19 @@ ol {
 @-webkit-keyframes loader {
   0% {
     -webkit-transform: rotate(0deg);
-    border: 4px solid #f44336;
+    border: 4px solid #7fad39;
     border-left-color: transparent;
   }
 
   50% {
     -webkit-transform: rotate(180deg);
-    border: 4px solid #673ab7;
+    border: 4px solid #7fad39;
     border-left-color: transparent;
   }
 
   100% {
     -webkit-transform: rotate(360deg);
-    border: 4px solid #f44336;
+    border: 4px solid #7fad39;
     border-left-color: transparent;
   }
 }
