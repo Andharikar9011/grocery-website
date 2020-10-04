@@ -111,11 +111,12 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <button onclick="cart_generator()" id="hide" class="primary-btn">
+            <!-- <button onclick="cart_generator()" id="hide" class="primary-btn">
               LOAD CART
-            </button>
-            <a href="./shoping-cart.html" class="primary-btn">UPDATE CART</a>
-
+            </button> -->
+            <div class="col-lg-12 text-center">     
+            <button onclick="LoadPage()" class="primary-btn">UPDATE CART</button>
+            </div>
             <br />
             <br />
             <div class="shoping__cart__table">
@@ -134,7 +135,13 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-12 text-center">
+        <button class="primary-btn text-center" onclick="Total()">Total Amount</button>
+        <br>
+        <div id="totalvalue" class="text-center" style="font-size: 25px; font-weight: 600;padding-top: 12px;"></div>
+        <br> 
         <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
+      </div>
       </div>
     </section>
     <!-- Shoping Cart Section End -->

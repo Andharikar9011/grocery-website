@@ -1,6 +1,13 @@
 "use strict";
 
-
+function LoadPage(){
+  var tbody=document.getElementById("my")
+  while (tbody.firstChild) {
+    tbody.removeChild(tbody.lastChild);
+  }
+  // tbody.removeChild(tbody.chil)
+  window.onload = cart_generator();
+}
 
 var cartvalue = 0;
 function addproduct(product,value, per,quant) {
@@ -62,10 +69,12 @@ try {
 }
 }
 function cart_generator() {
+  
   try {
     cartvalue = sessionStorage.getItem("products").split(",").length;
   } catch (error) {
     cartvalue = 0;
+   
   }
   if (cartvalue != 0) {
     var prod = sessionStorage.getItem("products").split(",");
@@ -73,6 +82,7 @@ function cart_generator() {
     var mass = sessionStorage.getItem("per").split(",");
     var quantitylist = sessionStorage.getItem("quantity").split(",");
     for (let index = 0; index < cartvalue; index++) {
+       
       // first tr
       var firsttr = document.createElement("TR");
       firsttr.setAttribute("id", index + "-1");
@@ -148,9 +158,12 @@ function cart_generator() {
       // td5span.setAttribute("id", index + "-51");
       // td5span.setAttribute("class", "icon_close");
       // document.getElementById(index + "-5").appendChild(td5span);
+      
     }
+    
   } else {
     console.log("Empty cart");
+    
   }
 }
 // function getvalue(productname){
@@ -213,6 +226,15 @@ sessionStorage.setItem("quantity",quantitylist);
 alert("Item:"+productname+" \n Removed")  
 console.log(sessionStorage)
 }
+}
 
-
+function Total(){
+  var totalvalue=0;
+    var val = sessionStorage.getItem("value").split(",");
+    var quantitylist = sessionStorage.getItem("quantity").split(",");
+    for (let index = 0; index < val.length; index++) {
+      totalvalue = totalvalue + parseInt(val[index])*parseInt(quantitylist[index])      
+    }
+    var item = document.getElementById("totalvalue")
+    item.innerHTML="₹ "+totalvalue.toString()
 }
