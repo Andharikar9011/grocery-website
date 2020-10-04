@@ -44,11 +44,14 @@ try {
   var a = document.getElementById("cartvalue");
   a.innerHTML = cartvalue;
 } catch (error) {
-  var a = document.getElementById("cartvalue");
-  a.innerHTML = 0;
   cartvalue = 0;
+  try{
+  var a = document.getElementById("cartvalue");
+  a.innerHTML = cartvalue;
+}catch(err){
+  cartvalue=0;
 }
-
+}
 function cart_generator() {
   try {
     cartvalue = sessionStorage.getItem("products").split(",").length;
@@ -74,7 +77,7 @@ function cart_generator() {
 
       // td1 h5
       var td1h5 = document.createElement("H5");
-      td1h5.setAttribute("id", "my212");
+      td1h5.setAttribute("id", index+"-211");
       td1h5.innerHTML = prod[index];
       document.getElementById(index + "-21").appendChild(td1h5);
 
@@ -100,23 +103,25 @@ function cart_generator() {
       td3divdiv.setAttribute("class", "pro-qty");
       document.getElementById(index + "-31").appendChild(td3divdiv);
       // td3-div-div-span
-      // var td3divdivspan1 = document.createElement("span");
-      // td3divdivspan1.setAttribute("id",index+"-3111")
-      // td3divdivspan1.setAttribute("class","dec qtybtn")
-      // td3divdivspan1.innerHTML="-"
-      // document.getElementById(index+"-311").appendChild(td3divdivspan1);
+          var td3divdivspan1 = document.createElement("span");
+          td3divdivspan1.setAttribute("id",index+"-3111")
+          td3divdivspan1.setAttribute("class","dec qtybtn")
+          td3divdivspan1.setAttribute("onclick","addquantity("+index+"-211"+")")
+          td3divdivspan1.innerHTML="-"
+          document.getElementById(index+"-311").appendChild(td3divdivspan1);
       // td3-div-div-input
-      var td3divdivinp = document.createElement("input");
+      var td3divdivinp = document.createElement("label");
       td3divdivinp.setAttribute("id", index + "-3112");
       td3divdivinp.setAttribute("type", "text");
       td3divdivinp.setAttribute("value", "1");
       document.getElementById(index + "-311").appendChild(td3divdivinp);
       // td3-div-div-span
-      // var td3divdivspan2 = document.createElement("span");
-      // td3divdivspan2.setAttribute("id",index+"-3113")
-      // td3divdivspan2.setAttribute("class","inc qtybtn")
-      // td3divdivspan2.innerHTML="+"
-      // document.getElementById(index+"-311").appendChild(td3divdivspan2);
+          var td3divdivspan2 = document.createElement("span");
+          td3divdivspan2.setAttribute("id",index+"-3113")
+          td3divdivspan2.setAttribute("class","inc qtybtn")
+          td3divdivspan1.setAttribute("onclick","addquantity("+index+"-211"+")")
+          td3divdivspan2.innerHTML="+"
+          document.getElementById(index+"-311").appendChild(td3divdivspan2);
 
       // td4
       var td4 = document.createElement("TD");
@@ -135,27 +140,11 @@ function cart_generator() {
       td5span.setAttribute("class", "icon_close");
       document.getElementById(index + "-5").appendChild(td5span);
     }
-    (function ($) {
-      var proQty = $(".pro-qty");
-      proQty.prepend('<span class="dec qtybtn">-</span>');
-      proQty.append('<span class="inc qtybtn">+</span>');
-      proQty.on("click", ".qtybtn", function () {
-        var $button = $(this);
-        var oldValue = $button.parent().find("input").val();
-        if ($button.hasClass("inc")) {
-          var newVal = parseFloat(oldValue) + 1;
-        } else {
-          // Don't allow decrementing below zero
-          if (oldValue > 0) {
-            var newVal = parseFloat(oldValue) - 1;
-          } else {
-            newVal = 0;
-          }
-        }
-        $button.parent().find("input").val(newVal);
-      });
-    })(jQuery);
   } else {
     console.log("Empty cart");
   }
+}
+
+function addquantity(productid){
+console.log(document.getElementById('"'+productid+'"').value)
 }
