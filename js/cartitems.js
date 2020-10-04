@@ -133,18 +133,18 @@ function cart_generator() {
       var td4 = document.createElement("TD");
       td4.setAttribute("id", index + "-4");
       td4.setAttribute("class", "shoping__cart__total");
-      td4.innerHTML = val[index];
+      td4.innerHTML = parseInt(val[index])*parseInt(quantitylist[index])
       document.getElementById(index + "-1").appendChild(td4);
       // td5
-      var td5 = document.createElement("TD");
-      td5.setAttribute("id", index + "-5");
-      td5.setAttribute("class", "shoping__cart__item__close");
-      document.getElementById(index + "-1").appendChild(td5);
-      // td5-span
-      var td5span = document.createElement("SPAN");
-      td5span.setAttribute("id", index + "-51");
-      td5span.setAttribute("class", "icon_close");
-      document.getElementById(index + "-5").appendChild(td5span);
+      // var td5 = document.createElement("TD");
+      // td5.setAttribute("id", index + "-5");
+      // td5.setAttribute("class", "shoping__cart__item__close");
+      // document.getElementById(index + "-1").appendChild(td5);
+      // // td5-span
+      // var td5span = document.createElement("SPAN");
+      // td5span.setAttribute("id", index + "-51");
+      // td5span.setAttribute("class", "icon_close");
+      // document.getElementById(index + "-5").appendChild(td5span);
     }
   } else {
     console.log("Empty cart");
