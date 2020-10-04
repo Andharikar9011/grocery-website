@@ -32,7 +32,7 @@
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
-      <div class="humberger__menu__logo">
+      <div class="humberger__menu__logo" >
         <a href="#"><img src="img/logo.png" alt="" /></a>
       </div>
 
@@ -40,7 +40,7 @@
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li class="active"><a href="./shop-grid.html">Shop</a></li>
-          <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+          <li><a href="./shoping-cart.html">Shopping Cart</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -81,10 +81,17 @@
               <ul>
                 <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> -->
                 <li>
+<<<<<<< Updated upstream
                   <a href="./shoping-cart.html"
                     ><i class="fa fa-shopping-cart"></i>
                     <span id="cartvalue"></span>
                     </a>
+=======
+                  <a onclick="cart_generator()" href="./shoping-cart.html"
+                    ><i class="fa fa-shopping-cart"></i>
+                    <span id="cartvalue"></span>
+                  </a>
+>>>>>>> Stashed changes
                 </li>
               </ul>
             </div>
@@ -103,7 +110,7 @@
     <!-- Hero Section End -->
 
     <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -128,18 +135,17 @@
                   <th>Product</th>
                   <th></th>
                   <th>Price</th>
-                  <th>Add to Cart</th>
+                  <th>Add</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="shoping__cart__item">
                     <img src="img/all/desi_tomatoes.png" alt="" />
-                    
                   </td>
                   <td><h5>Desi Tomato</h5></td>
-                  <td class="shoping__cart__price">₹.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td class="shoping__cart__price">₹35.00</td>
+                  <td><a href="./shop-grid.html" onclick="addproduct('Desi Tomato','35','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -152,7 +158,7 @@
                   </td>
                   <td><h5>Vaishali Tomato</h5></td>
                   <td class="shoping__cart__price">₹35.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Vaishali Tomato','35','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -165,7 +171,7 @@
                   </td>
                   <td><h5>Potato</h5></td>
                   <td class="shoping__cart__price">₹40.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Potato','40','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -178,7 +184,7 @@
                   </td>
                   <td><h5>Cucumber</h5></td>
                   <td class="shoping__cart__price">₹35.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Cucumber','35','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -191,7 +197,7 @@
                   </td>
                   <td><h5>Carrot (Medium)</h5></td>
                   <td class="shoping__cart__price">₹40.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Carrot (Medium)','40','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -204,7 +210,7 @@
                   </td>
                   <td><h5>Cauliflower (Medium)</h5></td>
                   <td class="shoping__cart__price">₹80.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Cauliflower (Medium)','80','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -217,7 +223,7 @@
                   </td>
                   <td><h5>Shimla (Large)</h5></td>
                   <td class="shoping__cart__price">₹65.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Shimla (Large)','65','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -230,7 +236,7 @@
                   </td>
                   <td><h5>Shimla (Medium)</h5></td>
                   <td class="shoping__cart__price">₹60.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Shimla (Medium)','60','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -243,7 +249,7 @@
                   </td>
                   <td><h5>Chilly (Kakdi Mirch)</h5></td>
                   <td class="shoping__cart__price">According to Stock</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Chilly (Kakdi Mirch)','0','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -256,7 +262,7 @@
                   </td>
                   <td><h5>Green Chilly</h5></td>
                   <td class="shoping__cart__price">₹50.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Green Chilly','50','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -269,7 +275,7 @@
                   </td>
                   <td><h5>Okra (Medium)</h5></td>
                   <td class="shoping__cart__price">₹50.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Okra (Medium)','50','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -282,7 +288,7 @@
                   </td>
                   <td><h5>Bitter Gourd</h5></td>
                   <td class="shoping__cart__price">₹60.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Bitter Gourd','60','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -295,7 +301,7 @@
                   </td>
                   <td><h5>Brinjal (Medium)</h5></td>
                   <td class="shoping__cart__price">₹50.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Brinjal (Medium)','50','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -308,7 +314,7 @@
                   </td>
                   <td><h5>Tondli (Medium)</h5></td>
                   <td class="shoping__cart__price">₹50.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Tondli (Medium)','50','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -321,7 +327,7 @@
                   </td>
                   <td><h5>Ridge Gourd (Dodka)</h5></td>
                   <td class="shoping__cart__price">₹80.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Ridge Gourd (Dodka)','80','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -334,7 +340,7 @@
                   </td>
                   <td><h5>Gilka</h5></td>
                   <td class="shoping__cart__price">₹75.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Gilka','75','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -347,7 +353,7 @@
                   </td>
                   <td><h5>Bhopla</h5></td>
                   <td class="shoping__cart__price">₹60.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Bhopla','60','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -360,7 +366,7 @@
                   </td>
                   <td><h5>Garlic</h5></td>
                   <td class="shoping__cart__price">₹150.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Garlic','150','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -373,7 +379,7 @@
                   </td>
                   <td><h5>Beet</h5></td>
                   <td class="shoping__cart__price">₹40.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Beet','40','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -386,7 +392,7 @@
                   </td>
                   <td><h5>Beans</h5></td>
                   <td class="shoping__cart__price">₹150.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Beans','150','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -399,7 +405,7 @@
                   </td>
                   <td><h5>Ginger (Old)</h5></td>
                   <td class="shoping__cart__price">₹60.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Ginger (Old)','60','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -412,7 +418,7 @@
                   </td>
                   <td><h5>Lemon</h5></td>
                   <td class="shoping__cart__price">₹40.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Lemon','40','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -425,7 +431,7 @@
                   </td>
                   <td><h5>Onion (Medium)</h5></td>
                   <td class="shoping__cart__price">₹50.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Onion (Medium)','50','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -438,7 +444,7 @@
                   </td>
                   <td><h5>Onion (Large)</h5></td>
                   <td class="shoping__cart__price">₹50.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Onion (Large)','50','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -451,7 +457,7 @@
                   </td>
                   <td><h5>Onion (Small)</h5></td>
                   <td class="shoping__cart__price">₹40.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Onion (Small)','40','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -464,7 +470,7 @@
                   </td>
                   <td><h5>Cluster Beans (Guar)</h5></td>
                   <td class="shoping__cart__price">₹60.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Cluster Beans (Guar)','60','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -477,7 +483,7 @@
                   </td>
                   <td><h5>Corn</h5></td>
                   <td class="shoping__cart__price">₹30.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Corn','30','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -490,7 +496,7 @@
                   </td>
                   <td><h5>Radish (White)</h5></td>
                   <td class="shoping__cart__price">₹10.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Radish (White)','10','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -503,7 +509,7 @@
                   </td>
                   <td><h5>Sweet Potato</h5></td>
                   <td class="shoping__cart__price">₹40.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Sweet Potato','40','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -516,7 +522,7 @@
                   </td>
                   <td><h5>Red Pumpkin</h5></td>
                   <td class="shoping__cart__price">₹20.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Red Pumpkin','20','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -529,7 +535,7 @@
                   </td>
                   <td><h5>Taro Root (Arvi)</h5></td>
                   <td class="shoping__cart__price">According to Stock</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Taro Root (Arvi)','0','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -542,7 +548,7 @@
                   </td>
                   <td><h5>White Pumpkin (Chaki)</h5></td>
                   <td class="shoping__cart__price">₹30.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('White Pumpkin (Chaki)','30','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -555,7 +561,7 @@
                   </td>
                   <td><h5>Dilpasand</h5></td>
                   <td class="shoping__cart__price">Out of Stock</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Dilpasand','0','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -568,7 +574,7 @@
                   </td>
                   <td><h5>Corriander</h5></td>
                   <td class="shoping__cart__price">₹20.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Corriander','20','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -581,7 +587,7 @@
                   </td>
                   <td><h5>Fenugreek</h5></td>
                   <td class="shoping__cart__price">₹15.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Fenugreek','15','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -594,7 +600,7 @@
                   </td>
                   <td><h5>Spinach</h5></td>
                   <td class="shoping__cart__price">₹15.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Spinach','15','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -607,7 +613,7 @@
                   </td>
                   <td><h5>Green Sorrel (ambat chuka)</h5></td>
                   <td class="shoping__cart__price">₹15.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Green Sorrel (ambat chuka)','15','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -620,7 +626,7 @@
                   </td>
                   <td><h5>Spring Onion</h5></td>
                   <td class="shoping__cart__price">₹10.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Spring Onion','10','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -633,7 +639,7 @@
                   </td>
                   <td><h5>Ambadi</h5></td>
                   <td class="shoping__cart__price">₹15.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Ambadi','15','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
@@ -646,7 +652,7 @@
                   </td>
                   <td><h5>Kardai</h5></td>
                   <td class="shoping__cart__price">₹15.00</td>
-                  <td><a href="./shoping-cart.html"
+                  <td><a href="./shop-grid.html" onclick="addproduct('Kardai','15','perkg','1')"
                     ><i class="fa fa-shopping-cart fa-2x"></i>
                     <span id="cartvalue"></span>
                   </a></td>
