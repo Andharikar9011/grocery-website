@@ -1,9 +1,10 @@
 "use strict";
 var cartvalue = 0;
-function addproduct(product, value, per) {
+function addproduct(product,value, per,quant) {
   var prod = [];
   var val = [];
   var mass = [];
+  var quantity=[];
   console.log(sessionStorage);
   if (
     sessionStorage.getItem("products") == undefined ||
@@ -13,9 +14,11 @@ function addproduct(product, value, per) {
     prod.push(product);
     val.push(value);
     mass.push(per);
+    quantity.push(quant)
     sessionStorage.setItem("products", prod);
     sessionStorage.setItem("value", val);
     sessionStorage.setItem("per", mass);
+    sessionStorage.setItem("quantity",quantity);
     console.log(sessionStorage.getItem("products"));
   } else if (sessionStorage.getItem("products") != []) {
     var prod = sessionStorage.getItem("products").split(",");
@@ -32,7 +35,10 @@ function addproduct(product, value, per) {
       var mass = sessionStorage.getItem("per").split(",");
       mass.push(per);
       sessionStorage.setItem("per", mass);
-      console.log(prod, val, mass);
+      var quantity = sessionStorage.getItem("quantity").split(",");
+      quantity.push(quant);
+      sessionStorage.setItem("quantity", quantity);
+      console.log(prod, val, mass,quantity);
     } else {
       alert("Product Already Added.");
     }
@@ -62,7 +68,7 @@ function cart_generator() {
     var prod = sessionStorage.getItem("products").split(",");
     var val = sessionStorage.getItem("value").split(",");
     var mass = sessionStorage.getItem("per").split(",");
-
+    var quantitylist = sessionStorage.getItem("quantity").split(",");
     for (let index = 0; index < cartvalue; index++) {
       // first tr
       var firsttr = document.createElement("TR");
@@ -106,20 +112,20 @@ function cart_generator() {
           var td3divdivspan1 = document.createElement("span");
           td3divdivspan1.setAttribute("id",index+"-3111")
           td3divdivspan1.setAttribute("class","dec qtybtn")
-          td3divdivspan1.setAttribute("onclick","addquantity("+index+"-211"+")")
+          td3divdivspan1.setAttribute("onclick","subquantity('"+prod[index]+"')")
           td3divdivspan1.innerHTML="-"
           document.getElementById(index+"-311").appendChild(td3divdivspan1);
       // td3-div-div-input
-      var td3divdivinp = document.createElement("label");
+      var td3divdivinp = document.createElement("input");
       td3divdivinp.setAttribute("id", index + "-3112");
       td3divdivinp.setAttribute("type", "text");
-      td3divdivinp.setAttribute("value", "1");
+      td3divdivinp.value=quantitylist[index]
       document.getElementById(index + "-311").appendChild(td3divdivinp);
       // td3-div-div-span
           var td3divdivspan2 = document.createElement("span");
           td3divdivspan2.setAttribute("id",index+"-3113")
           td3divdivspan2.setAttribute("class","inc qtybtn")
-          td3divdivspan1.setAttribute("onclick","addquantity("+index+"-211"+")")
+          td3divdivspan2.setAttribute("onclick","addquantity('"+prod[index]+"')")
           td3divdivspan2.innerHTML="+"
           document.getElementById(index+"-311").appendChild(td3divdivspan2);
 
@@ -144,7 +150,66 @@ function cart_generator() {
     console.log("Empty cart");
   }
 }
+// function getvalue(productname){
+//   var prodlist = sessionStorage.getItem("products").split(",");
+//   var quantitylist = sessionStorage.getItem("quantity").split(",");
+  // if (prodlist.indexOf(productname)!=-1){
+  //   value=quantitylist[prodlist.indexOf(productname)]
+  //   return value
+  // }else{
+  //   return 0
+  // }
+// }
+function addquantity(productname){
+  console.log('entry')
+    var prodlist = sessionStorage.getItem("products").split(",");
+  var quantitylist = sessionStorage.getItem("quantity").split(",");
+  // console.log(prodlist)
+  // console.log(quantitylist)
+  // console.log(productname)
+//  console.log(prodlist.indexOf(productname))
+ var i = prodlist.indexOf(productname)
+//  console.log(i)
+  var value=quantitylist[i]
+  // console.log(typeof(value))
+  var value1=parseInt(value)+1
+  // console.log(typeof(value1))
+  // console.log(value1)
+  var value2 =value1.toString()
+  // console.log(value2)
+  // console.log(typeof(value2))
+  quantitylist[i]=value2
 
-function addquantity(productid){
-console.log(document.getElementById('"'+productid+'"').value)
+  console.log(quantitylist)
+  sessionStorage.setItem("quantity",quantitylist)
+  alert("Item:"+productname+" \n Quantity:"+value2)  
+  // console.log(sessionStorage)
+}
+function subquantity(productname){
+  console.log('entry1')
+    var val = sessionStorage.getItem("value").split(",");
+    var mass = sessionStorage.getItem("per").split(",");
+  var prodlist = sessionStorage.getItem("products").split(",");
+var quantitylist = sessionStorage.getItem("quantity").split(",");
+var value= parseInt(quantitylist[prodlist.indexOf(productname)])
+if(value>1){
+  value=value-1
+  quantitylist[prodlist.indexOf(productname)]=value.toString()
+sessionStorage.setItem("quantity",quantitylist)
+alert("Item:"+productname+" \n Quantity:"+value.toString())  
+}else if(value==1){
+  var i = prodlist.indexOf(productname)
+val.splice(i,1)
+mass.splice(i,1)
+quantitylist.splice(i,1)
+prodlist.splice(i,1)
+sessionStorage.setItem("products", prodlist);
+sessionStorage.setItem("value", val);
+sessionStorage.setItem("per", mass);
+sessionStorage.setItem("quantity",quantitylist);
+alert("Item:"+productname+" \n Removed")  
+console.log(sessionStorage)
+}
+
+
 }
