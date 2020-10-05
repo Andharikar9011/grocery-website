@@ -238,3 +238,20 @@ function Total(){
     var item = document.getElementById("totalvalue")
     item.innerHTML="₹ "+totalvalue.toString()
 }
+
+function Message_generator(){
+var val = sessionStorage.getItem("value").split(",");
+var mass = sessionStorage.getItem("per").split(",");
+var prodlist = sessionStorage.getItem("products").split(",");
+var quantitylist = sessionStorage.getItem("quantity").split(",");
+
+for (let index = 0; index < prodlist.length; index++) {
+
+
+for (let index = 0; index < prodlist.length; index++) {
+      totalvalue = totalvalue + parseInt(val[index])*parseInt(quantitylist[index])      
+  }
+  var win = window.open(`https://wa.me/9011935446?text=${name}`, '_blank');
+  alert("Order Sent To Distributer.")
+
+}
