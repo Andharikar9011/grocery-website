@@ -245,12 +245,12 @@ var mass = sessionStorage.getItem("per").split(",");
 var prodlist = sessionStorage.getItem("products").split(",");
 var quantitylist = sessionStorage.getItem("quantity").split(",");
 var totalvalue=0;
-var message = "Welcome This is Quick N Fresh !!! %0D%0A Your Cart Contains: %0D%0A";
+var message = "Welcome This is Quick N Fresh U+1F345 U+1F44C!!! %0D%0AYour Cart Contains: %0D%0A";
 for (let index = 0; index < prodlist.length; index++) {
   totalvalue = totalvalue + parseInt(val[index])*parseInt(quantitylist[index])      
 }
 for (let ind = 0; ind < prodlist.length; ind++) {
-  message =message + "Item "+(ind+1)+" : "+prodlist[ind]+" Price: ₹"+val[ind]+" / "+mass[ind]+" Quantity : "+quantitylist[ind]+" "+mass[ind]+"%0D%0A";
+  message =message + "Item "+(ind+1)+" : "+prodlist[ind]+"%0D%0APrice: ₹"+val[ind]+" / "+mass[ind]+" Quantity : "+quantitylist[ind]+" "+mass[ind]+"%0D%0A";
 }
 message = message + "Total Items Cost = ₹"+totalvalue +"%0D%0AKindly Share your Location so we can reach you Quick N Fresh !!!"
   var win = window.open(`https://wa.me/918983778453?text=${message}`, '_blank');
