@@ -253,7 +253,7 @@ for (let ind = 0; ind < prodlist.length; ind++) {
   message =message + "Item "+(ind+1)+" : "+prodlist[ind]+" Price: ₹"+val[ind]+" / "+mass[ind]+" Quantity : "+quantitylist[ind]+" "+mass[ind]+"\n";
 }
 message = message + "Total Items Cost = ₹"+totalvalue +"\nKindly Share your Location so we can reach you Quick N Fresh !!!"
-  var win = window.open(`https://wa.me/8983778453?text=${message}`, '_blank');
+  var win = window.open(`https://wa.me/918983778453?text=${message}`, '_blank');
   // alert(message);
   // alert("Order Sent To Distributer.")
 
