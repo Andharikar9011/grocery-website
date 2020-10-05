@@ -252,7 +252,7 @@ for (let index = 0; index < prodlist.length; index++) {
 for (let ind = 0; ind < prodlist.length; ind++) {
   message =message + "Item "+(ind+1)+" : "+prodlist[ind]+"%0D%0APrice: ₹"+val[ind]+" / "+mass[ind]+" Quantity : "+quantitylist[ind]+" "+mass[ind]+"%0D%0A";
 }
-message = message + "Total Items Cost = ₹"+totalvalue +"%0D%0AKindly Share your Location so we can reach you Quick N Fresh !!!"
+message = message + "Total Items Cost = ₹"+totalvalue +"%0D%0AKindly Share your Location U+1F3E1 so we can reach you Quick N Fresh !!!"
   var win = window.open(`https://wa.me/918983778453?text=${message}`, '_blank');
   // alert(message);
   // alert("Order Sent To Distributer.")
