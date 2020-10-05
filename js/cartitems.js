@@ -10,7 +10,7 @@ function LoadPage(){
 }
 
 var cartvalue = 0;
-function addproduct(product,value, per,quant) {
+function addproduct(product,value,per,quant) {
   var prod = [];
   var val = [];
   var mass = [];
@@ -253,5 +253,5 @@ for (let index = 0; index < prodlist.length; index++) {
   }
   var win = window.open(`https://wa.me/9011935446?text=${name}`, '_blank');
   alert("Order Sent To Distributer.")
-
+}
 }
