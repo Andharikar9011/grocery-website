@@ -246,7 +246,7 @@ var prodlist = sessionStorage.getItem("products").split(",");
 var quantitylist = sessionStorage.getItem("quantity").split(",");
 var totalvalue=0;
 
-var message = "Welcome This is Quick N Fresh !!! %0D%0AYour Cart Contains: %0D%0A";
+var message = "Welcome to Quick N Fresh !!! %0D%0AYour Cart Contains: %0D%0A";
 for (let index = 0; index < prodlist.length; index++) {
   totalvalue = totalvalue + parseInt(val[index])*parseInt(quantitylist[index])      
 }
