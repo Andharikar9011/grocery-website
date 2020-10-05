@@ -104,7 +104,7 @@ function cart_generator() {
       var td2 = document.createElement("TD");
       td2.setAttribute("id", index + "-2");
       td2.setAttribute("class", "shoping__cart__price");
-      td2.innerHTML ="₹ "+ val[index] + " " + mass[index];
+      td2.innerHTML ="₹ "+ val[index] + "&nbsp&nbsp/&nbsp&nbsp" + mass[index];
       document.getElementById(index + "-1").appendChild(td2);
       // td3
       var td3 = document.createElement("TD");
@@ -244,14 +244,17 @@ var val = sessionStorage.getItem("value").split(",");
 var mass = sessionStorage.getItem("per").split(",");
 var prodlist = sessionStorage.getItem("products").split(",");
 var quantitylist = sessionStorage.getItem("quantity").split(",");
-
+var totalvalue=0;
+var message = "Welcome This is Quick N Fresh !!! \nYour Cart Contains: \n";
 for (let index = 0; index < prodlist.length; index++) {
-
-
-for (let index = 0; index < prodlist.length; index++) {
-      totalvalue = totalvalue + parseInt(val[index])*parseInt(quantitylist[index])      
-  }
-  var win = window.open(`https://wa.me/9011935446?text=${name}`, '_blank');
-  alert("Order Sent To Distributer.")
+  totalvalue = totalvalue + parseInt(val[index])*parseInt(quantitylist[index])      
 }
+for (let ind = 0; ind < prodlist.length; ind++) {
+  message =message + "Item "+(ind+1)+" : "+prodlist[ind]+" Price: ₹"+val[ind]+" / "+mass[ind]+" Quantity : "+quantitylist[ind]+" "+mass[ind]+"\n";
+}
+message = message + "Total Items Cost = ₹"+totalvalue +"\nKindly Share your Location so we can reach you Quick N Fresh !!!"
+  var win = window.open(`https://wa.me/8983778453?text=${message}`, '_blank');
+  // alert(message);
+  // alert("Order Sent To Distributer.")
+
 }
